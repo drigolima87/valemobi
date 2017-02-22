@@ -1,0 +1,44 @@
+<!-- Form used to add new entries of employee in database -->
+<form class="form-horizontal alert alert-warning" name="mercadoiraList" id="mercadoriaForm" ng-submit="insertInfo(mercadoria);" hidden>
+<h3 class="text-center">Insert Employee Details Into Database</h3>
+<div class="form-group">
+<label for="Name">Nome Mercadoria:</label>
+<input type="text" name="mercadoria_nome" class="form-control" placeholder="Digite o nome da Mercadoria" ng-model="mercadoria.nome" autofocus required />
+</div>
+<div class="form-group">
+<p class="text-danger" ng-show="mercadoriaList.mercadoria_nome.$invalid && mercadoriaList.mercadoria_nome.$dirty">Nome da Mercadoria Vazio</p>
+</div>
+<div class="form-group">
+<label for="Tipo_Mercadoria"></label>Tipo Mercadoria:</label>
+<input type="text" name="tipo_mercadoria" class="form-control" placeholder="Digite o Tipo da Mercadoria" ng-model="mercadoria.tipo_mercadoria" autofocus required />
+</div>
+<div class="form-group">
+<p class="text-danger" ng-show="mercadoriaList.tipo_mercadoria.$invalid && mercadoriaList.tipo_mercadoria.$dirty">Tipo Mercadoria Invalido</p>
+</div>
+<div class="form-group">
+<label for="Quantidade">Quantidade:</label>
+<input type="text" name="quantidade" ng-model="mercadoria.quantidade" autofocus required />
+</div>
+<div class="form-group">
+<p class="text-danger" ng-show="mercadoriaList.quantidade.$invalid && mercadoriaList.quantidade.$dirty">Quantidade Mercadoria Invalido</p>
+</div>
+<div class="form-group">
+<label for="Preco">Preço:</label>
+<input type="text" name="preco" class="form-control" placeholder="Digite o Preço" ng-model="mercadoria.preco" autofocus required />
+</div>
+<div class="form-group">
+<p class="text-danger" ng-show="mercadoriaList.preco.$invalid && mercadoriaList.preco.$dirty">Preço da Mercadoria Invalido</p>
+</div>
+<div class="form-group">
+<label for="tipo_negocio">Gender:</label>
+<label for="" class="radio-inline">
+<input type="radio" name="tipo_negocio" value="1" ng-model="mercadoria.tipo_negocio">VENDA
+</label>
+<label for="" class="radio-inline">
+<input type="radio" name="tipo_negocio" value="2" ng-model="mercadoria.tipo_negocio">COMPRA
+</label>
+</div>
+<div class="form-group">
+<button class="btn btn-warning" ng-disabled="mercadoriaList.$invalid">Add Into Database</button>
+</div>
+</form>
